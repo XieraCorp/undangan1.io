@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undangan Pernikahan Adiba & Habib</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Pastikan Anda memiliki file CSS terpisah untuk styling -->
+  </head>
+  <body>
+    <header>
+      <h1>The Wedding of</h1>
+      <h2>Adiba & Habib</h2>
+    </header>
+
+    <section id="introduction">
+      <p>Assalamu'alaikum Wr. Wb.</p>
+      <p>
+        Tanpa mengurangi rasa hormat, kami mengundang Bapak/Ibu/Saudara/i serta
+        kerabat sekalian untuk menghadiri acara pernikahan kami:
+      </p>
+    </section>
+
+    <section id="bride-groom">
+      <div class="person">
+        <h3>Adiba Putri Syakila</h3>
+        <p>Putri Kedua Bapak M. Dawam & (Almh) Ibu Dewi Sudarwati</p>
+      </div>
+      <div class="person">
+        <h3>Habib Yulianto</h3>
+        <p>Putra Kedua Bapak M. Dawam & (Almh) Ibu Dewi Sudarwati</p>
+      </div>
+    </section>
+
+    <section id="event-details">
+      <h3>Akad Nikah</h3>
+      <p>Minggu, 30 Maret 2025</p>
+      <p>Pukul 10.00 WIB</p>
+      <p>Alamat: Ds Pagu Kec. Wates Kab. Kediri</p>
+      <a href="https://maps.app.goo.gl">Lihat Lokasi</a>
+
+      <h3>Resepsi</h3>
+      <p>Minggu, 30 Maret 2025</p>
+      <p>Pukul 10.00 WIB</p>
+      <p>Alamat: Ds Pagu Kec. Wates Kab. Kediri</p>
+      <a href="https://maps.app.goo.gl">Lihat Lokasi</a>
+    </section>
+
+    <section id="live-streaming">
+      <h3>Live Streaming</h3>
+      <p>
+        Kami mengundang Bapak/Ibu/Saudara/i untuk menyaksikan pernikahan kami
+        secara virtual yang disiarkan langsung melalui sosial media di bawah
+        ini:
+      </p>
+      <p>Minggu, 30 Maret 2025</p>
+      <p>Pukul 09.00 WIB</p>
+      <a href="https://www.instagram.com">Klik Disini</a>
+    </section>
+
+    <section id="gallery">
+      <h3>Our Gallery</h3>
+      <!-- Tambahkan gambar sesuai kebutuhan -->
+      <img src="foto1.jpg" alt="Foto Adiba dan Habib" />
+      <img src="foto2.jpg" alt="Foto Adiba dan Habib" />
+    </section>
+
+    <section id="digital-envelope">
+      <h3>Amplop Digital</h3>
+      <p>
+        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika
+        memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara
+        cashless.
+      </p>
+      <p>Nomor Rekening: 1234 5678 90 (a.n. Habib)</p>
+      <button onclick="copyToClipboard('1234 5678 90')">Copy</button>
+    </section>
+
+    <section id="guest-book">
+      <h3>Ucapkan Sesuatu</h3>
+      <form>
+        <textarea placeholder="Berikan ucapan & doa restu"></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
+        Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas
+        kehadiran dan doa restunya, kami mengucapkan terima kasih.
+      </p>
+      <p>Wassalamu'alaikum Wr. Wb.</p>
+      <p>Adiba & Habib</p>
+    </footer>
+
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          function () {
+            alert("Nomor rekening berhasil disalin");
+          },
+          function (err) {
+            alert("Gagal menyalin teks: ", err);
+          }
+        );
+      }
+    </script>
+  </body>
+</html>

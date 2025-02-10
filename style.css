@@ -1,0 +1,424 @@
+/* Root Variables */
+:root {
+  --pink: #f14e95;
+  --bg: #2a2828;
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.navbar-bottom {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--pink);
+  padding: 1px;
+  width: 50%;
+  max-width: 300px;
+  border-radius: 15px;
+  border: 2px solid #e3c99d;
+  position: sticky;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-item {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: #e3c99d;
+  transform: scale(1.2);
+}
+
+/* Global Styling */
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/bg-prewed.jpg") center/cover no-repeat;
+  filter: opacity(0.7);
+  z-index: -1;
+}
+
+.home h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  color: var(--pink);
+}
+
+.hero h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 4rem;
+}
+
+.hero h4 {
+  font-size: 1.4rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.simply-section {
+  background: white;
+  color: var(--pink);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 70px;
+}
+
+.simply-amount {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.simply-word {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Tombol */
+.hero a {
+  color: var(--pink);
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background-color: var(--pink);
+  color: white;
+}
+
+/* Section Couple */
+.couple-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.couple-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.couple-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.couple-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Section Kata */
+.kata,
+.rsvp {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("img/bg-home.png") center/cover no-repeat;
+}
+.kata h7,
+.rsvp h2 {
+  color: #f14e95;
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.kata h5 {
+  color: #f14e95;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.kata h2 {
+  font-family: "Charm", serif;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.kata p {
+  font-size: 1.2rem;
+  max-width: 70%;
+  background: blue;
+  padding: 20px;
+  margin: auto;
+  border-radius: 50px;
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero h4 {
+    font-size: 1.2rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+  .simply-section {
+    min-width: 60px;
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+  .simply-amount {
+    font-size: 1.5rem;
+  }
+  .couple-container {
+    grid-template-columns: 1fr;
+  }
+  .couple-box {
+    max-width: 90%;
+  }
+}
+.couple img {
+  border: 5px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+#couple {
+  background-image: url("img/bg-home.png"); /* Ganti dengan path gambar */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0; /* Atur padding agar konten tetap rapi */
+  color: blue; /* Agar teks terlihat jelas di atas gambar */
+}
+.couple p {
+  text-align: center;
+  font-family: "Oleo Script", cursive; /* Perbaikan tipe font */
+  font-weight: 400;
+  text-shadow: #2a2828;
+  font-style: normal;
+  font-size: 1.2rem; /* Ukuran default yang nyaman */
+  margin: auto; /* Memberikan sedikit ruang atas & bawah */
+  max-width: 80%; /* Membatasi lebar agar tetap rapi */
+  margin-bottom: 80px;
+}
+
+.couple h5 {
+  color: #f14e95;
+  font-family: "Charm", serif;
+  font-size: 2rem;
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 768px) {
+  .couple p {
+    font-size: 1rem; /* Ukuran lebih kecil untuk HP */
+    max-width: 90%; /* Lebih lebar untuk tampilan HP */
+  }
+}
+
+/* Responsif untuk layar besar (Laptop) */
+@media (min-width: 1024px) {
+  .couple p {
+    font-size: 1.4rem; /* Lebih besar untuk tampilan laptop */
+    max-width: 70%; /* Lebih kecil agar tidak terlalu melebar */
+  }
+}
+/* Animasi Scroll */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tambahkan animasi pada semua elemen */
+.hero h1,
+.hero h4,
+.hero p,
+.kata h2,
+.kata p,
+.couple p,
+.couple h5 {
+  transform: translateY(30px);
+}
+
+.couple-img,
+.couple-box {
+  transform: scale(0.9);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+}
+
+[data-aos="fade-right"] {
+  transform: translateX(-30px);
+}
+
+[data-aos="fade-left"] {
+  transform: translateX(30px);
+}
+
+/* Aktifkan animasi ketika elemen muncul */
+.aos-animate {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+#tanggal {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("img/bg-home.png") center/cover no-repeat scroll;
+  padding: 60px 20px;
+  color: white;
+}
+
+.tanggal-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.tanggal-card {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Efek blur */
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tanggal-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tanggal-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.map {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("img/bg-home.png") center/cover no-repeat scroll;
+  padding: 60px 20px;
+  color: black;
+}
+#gift {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("img/bg-home.png") center/cover no-repeat scroll;
+  padding: 60px 20px;
+  color: black;
+}
+
+#gift h2 {
+  font-family: "Outfit", sans-serif;
+  color: #2d3748;
+}
+.gift-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.gift-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+}
+.gift-card p {
+  font-size: 1rem;
+  color: #555;
+}
+.copy-btn {
+  background-color: #28a745; /* Warna hijau */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #218838; /* Hijau lebih gelap saat hover */
+  transform: scale(1.05);
+}
+.rsvp p {
+  font-family: "Charm", serif;
+  font-size: 1rem;
+  color: #2d3748;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}

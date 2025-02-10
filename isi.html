@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Disa & Anggi Wedding</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      ,
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Musik Button -->
+    <audio id="wedding-music" loop>
+      <source src="musik.mp3" type="audio/mpeg" />
+    </audio>
+    <button id="music-toggle" class="music-button">
+      <i class="fa fa-music"></i>
+    </button>
+
+    <script>
+      const music = document.getElementById("wedding-music");
+      const musicToggle = document.getElementById("music-toggle");
+      let isPlaying = false;
+
+      musicToggle.addEventListener("click", () => {
+        if (isPlaying) {
+          music.pause();
+        } else {
+          music.play();
+        }
+        isPlaying = !isPlaying;
+      });
+    </script>
+    <!-- Couple Section -->
+    <section id="couple" class="couple py-5 bg-light">
+      <div class="container text-center">
+        <h5 data-aos="fade-up">Pasangan Mempelai</h5>
+        <p class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, insyaaAllah
+          kami akan menyelenggarakan acara pernikahan anak kami:
+        </p>
+        <div class="row justify-content-center align-items-center">
+          <div
+            class="col-md-5 text-center"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <img
+              src="img/pria.jpg"
+              alt="Mempelai Pria"
+              class="img-fluid rounded-circle"
+              width="200"
+              height="200"
+            />
+            <h4 class="mt-3">Disaputro</h4>
+            <p class="d1">putra dari bapak samto dan ibu jumilah</p>
+          </div>
+          <div class="col-md-2 text-center"></div>
+          <div
+            class="col-md-5 text-center"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <img
+              src="img/wanita.jpg"
+              alt="Mempelai Wanita"
+              class="img-fluid rounded-circle"
+              width="200"
+              height="200"
+            />
+            <h4 class="mt-3">Anggia</h4>
+            <p class="d2">putri dari bapak jimin dan ibu santi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kata Section -->
+    <section id="kata" class="kata py-5">
+      <div class="container text-center">
+        <h7 data-aos="fade-up">Waktu & Tempat</h7>
+        <h5 data-aos="fade-up" data-aos-delay="200">QS. Ar-Rum Ayat 21</h5>
+        <p class="fst-italic" data-aos="fade-up" data-aos-delay="400">
+          "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+          pasangan-pasangan untukmu dari jenismu sendiri agar kamu cenderung dan
+          merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih
+          dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
+          tanda-tanda bagi kaum yang berpikir."
+        </p>
+      </div>
+    </section>
+    <section id="tanggal">
+      <h2>Tanggal Penting</h2>
+
+      <div class="tanggal-container">
+        <!-- Akad Nikah -->
+        <div class="tanggal-card">
+          <h3>Akad Nikah</h3>
+          <p><strong>Hari:</strong> Sabtu</p>
+          <p><strong>Tanggal:</strong> 10 Mei 2025</p>
+          <p><strong>Tempat:</strong> Masjid Al-Fatih</p>
+        </div>
+
+        <!-- Resepsi -->
+        <div class="tanggal-card">
+          <h3>Resepsi</h3>
+          <p><strong>Hari:</strong> Minggu</p>
+          <p><strong>Tanggal:</strong> 11 Mei 2025</p>
+          <p><strong>Tempat:</strong> Gedung Serba Guna</p>
+        </div>
+      </div>
+    </section>
+    <section id="map" class="map py-5 bg-light">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Lokasi Acara</h2>
+        <p class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          Berikut adalah lokasi acara pernikahan kami. Silakan klik peta untuk
+          membuka Google Maps dan mendapatkan petunjuk arah.
+        </p>
+        <div
+          class="map-container"
+          data-aos="fade-up"
+          data-aos-delay="400"
+          style="width: 100%; max-width: 100%; height: auto"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15828.929239174488!2d110.50962835!3d-7.327784599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a792b071f7b63%3A0x990b9f7efc5b81f0!2sMALL%20RAMAYANA%20SALATIGA!5e0!3m2!1sid!2sid!4v1739148038715!5m2!1sid!2sid"
+            width="100%"
+            height="450"
+            style="border: 0; max-width: 100%"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="gift" class="py-12 text-center">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Hadiah Pernikahan</h2>
+        <p class="text-gray-600 mb-6">
+          Jika ingin memberikan hadiah, berikut adalah informasi rekening dan
+          e-wallet kami.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Rekening Bank -->
+          <div
+            class="gift-card p-6 border rounded-lg shadow-md bg-white text-center"
+          >
+            <h3 class="font-semibold">Transfer Bank</h3>
+            <p class="mt-2 text-lg font-medium" id="bank-account">
+              BCA - 1234567890
+            </p>
+            <p class="text-sm text-gray-600">a.n. Nama Pengantin</p>
+            <div class="flex justify-center mt-4">
+              <button class="copy-btn" onclick="copyText('bank-account')">
+                Salin Rekening
+              </button>
+            </div>
+          </div>
+
+          <!-- E-Wallet -->
+          <div
+            class="gift-card p-6 border rounded-lg shadow-md bg-white text-center"
+          >
+            <h3 class="font-semibold">E-Wallet</h3>
+            <p class="mt-2 text-lg font-medium" id="ewallet-number">
+              Gopay / OVO / Dana: 081234567890
+            </p>
+            <p class="text-sm text-gray-600">a.n. Nama Pengantin</p>
+            <div class="flex justify-center mt-4">
+              <button class="copy-btn" onclick="copyText('ewallet-number')">
+                Salin E-Wallet
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="rsvp" class="rsvp py-5 bg-light">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Konfirmasi Kehadiran</h2>
+        <p class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          Silakan konfirmasi kehadiran Anda dengan mengisi formulir di bawah
+          ini.
+        </p>
+        <form
+          id="rsvp-form"
+          class="mb-4"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="mb-3">
+            <input
+              type="text"
+              id="guest-name"
+              class="form-control"
+              placeholder="Nama Anda"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <textarea
+              id="guest-message"
+              class="form-control"
+              rows="3"
+              placeholder="Pesan untuk pengantin"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim</button>
+        </form>
+        <h3 class="mt-4">Pesan dari Tamu</h3>
+        <div id="guest-messages" class="list-group"></div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .getElementById("rsvp-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const name = document.getElementById("guest-name").value;
+          const message =
+            document.getElementById("guest-message").value || "(Tanpa pesan)";
+
+          if (name.trim() === "") {
+            alert("Silakan isi nama Anda.");
+            return;
+          }
+
+          const messageContainer = document.createElement("div");
+          messageContainer.classList.add(
+            "list-group-item",
+            "shadow-sm",
+            "p-3",
+            "mb-3",
+            "rounded",
+            "bg-white"
+          );
+          messageContainer.style.opacity = 0;
+          messageContainer.style.transform = "translateY(20px)";
+          messageContainer.innerHTML = `<h5 class='mb-1'>${name}</h5><p class='mb-0'>${message}</p>`;
+
+          document.getElementById("guest-messages").prepend(messageContainer);
+
+          setTimeout(() => {
+            messageContainer.style.transition = "all 0.5s ease-out";
+            messageContainer.style.opacity = 1;
+            messageContainer.style.transform = "translateY(0)";
+          }, 100);
+
+          setInterval(() => {
+            messageContainer.style.transition = "all 1s ease-in-out";
+            messageContainer.style.transform = "scale(1.05)";
+            setTimeout(() => {
+              messageContainer.style.transform = "scale(1)";
+            }, 1000);
+          }, 3000);
+
+          document.getElementById("rsvp-form").reset();
+        });
+    </script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS (Animate on Scroll) JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Durasi animasi dalam milidetik (1 detik)
+        once: false, // Animasi bisa muncul lagi saat discroll ke atas
+      });
+    </script>
+
+    <!-- Countdown Script -->
+    <script>
+      function updateCountdown() {
+        const weddingDate = new Date("2025-02-10T00:00:00").getTime();
+        const now = new Date().getTime();
+        const timeLeft = weddingDate - now;
+
+        if (timeLeft > 0) {
+          document.getElementById("days").innerText = Math.floor(
+            timeLeft / (1000 * 60 * 60 * 24)
+          );
+          document.getElementById("hours").innerText = Math.floor(
+            (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          document.getElementById("minutes").innerText = Math.floor(
+            (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          document.getElementById("seconds").innerText = Math.floor(
+            (timeLeft % (1000 * 60)) / 1000
+          );
+        } else {
+          document.getElementById("countdown").innerHTML =
+            "<h2>Hari ini adalah hari pernikahan!</h2>";
+        }
+      }
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+    </script>
+  </body>
+</html>
